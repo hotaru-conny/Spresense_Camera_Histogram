@@ -100,8 +100,7 @@ void drawHistogram(int hist[HIST_NUM], int startX, int startY, int color){
     if(histMaxCommon != 0){
       normHist = (int)((float)hist[i] * (float)HIST_MAX_HEIGHT / (float)histMaxCommon); 
     }
-    //左右反転に注意
-    display.drawLine(startX+HIST_NUM-i-1, startY+HIST_MAX_HEIGHT, startX+HIST_NUM-i-1, startY+HIST_MAX_HEIGHT-normHist, color);
+    display.drawLine(startX+i, startY+HIST_MAX_HEIGHT, startX+i, startY+HIST_MAX_HEIGHT-normHist, color);
   }
 }
 
